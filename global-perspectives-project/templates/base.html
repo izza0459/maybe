@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Global Perspectives Project{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="{% url 'home' %}" class="logo">Global Perspectives</a>
+                <ul class="nav-links">
+                    <li><a href="{% url 'home' %}" {% if request.resolver_match.url_name == 'home' %}class="active"{% endif %}>Home</a></li>
+                    <li><a href="{% url 'primary_research' %}" {% if request.resolver_match.url_name == 'primary_research' %}class="active"{% endif %}>Primary Research</a></li>
+                    <li><a href="{% url 'secondary_research' %}" {% if request.resolver_match.url_name == 'secondary_research' %}class="active"{% endif %}>Secondary Research</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Global Perspectives Project. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
