@@ -27,7 +27,7 @@ export default function PrimaryResearchPage() {
         <Card className="mb-12">
           <CardHeader>
             <CardTitle className="text-2xl text-center" style={{ color: "#0B1957" }}>
-              Interview with Permanent Employees
+              Interview with Permanent Employees, Career counsellor and Gig Workers
             </CardTitle>
             <p className="text-center text-lg" style={{ color: "#0B1957" }}>
               Haris Engineering Concern PTV Ltd - September 17, 2025
